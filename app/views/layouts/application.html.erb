@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smarttech</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!--<link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans:300,400,600,700" rel="stylesheet">-->
+  <link href="/app/asssets/stylesheets/bootstrap.min.css" rel="stylesheet" />
+  <link href="/app/asssets/stylesheets/fancybox/jquery.fancybox.css" rel="stylesheet">
+  <link href="/app/asssets/stylesheets/jcarousel.css" rel="stylesheet" />
+  <link href="/app/asssets/stylesheets/flexslider.css" rel="stylesheet" />
+  <link href="/app/asssets/stylesheets/style.css" rel="stylesheet" />
+  
+  <link href="skins/default.css" rel="stylesheet" />
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+  <div id = "wrap">
+    <%= render 'shared/nav' %>
+    <div class = "container">
+      <div class = "row">
+        <%= yield %>
+      </div>
+    </div>
+    <!--= render 'shared/footer' %>-->
+  </div>
+  
+  <div class="footer text-center">
+    <p>© Aarcana <%= Date.today.year %> All Rights Reserved</p>    
+  </div><!-- wrap -->
+
+</body>
+</html>
